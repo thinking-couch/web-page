@@ -1,0 +1,18 @@
+es-MX:
+  footer:
+    'With ♥ from Colima'
+  header:
+    title:
+      'Una comunidad que habla, escúcha y comparte.'
+    description:
+      'Welcome thinker! Somos un meetup de diseño web, gráfico, mobile, conceptos y tooling, todo en un solo spot! '
+    location:
+      title:
+        'Estamos en:'
+      location1:
+        'Colima, Colima. MX'
+      location2:
+        'Ciudad de México'
+    social-media:
+      title:
+        'Se parte:'
