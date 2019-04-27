@@ -1,0 +1,21 @@
+#footer {
+  background: linear-gradient(141.68deg, #3023AE 0%, #C86DD7 100%);
+  bottom: 0;
+  color: $white;
+  display: flex;
+  font-size: 21px;
+  height: 7.14em;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  .footer-text {
+    margin-top: 2em;
+  }
+
+  .footer-social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+}

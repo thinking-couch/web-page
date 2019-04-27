@@ -1,0 +1,18 @@
+%section#header
+  = image_tag "shared/logo.svg", class: 'header-logo'
+  .header-container
+    = image_tag "shared/mobile/couple.svg", class: 'header-image'
+    .text-container
+      %h2.header-title
+        = t('header.title')
+      %p.header-description
+        = t('header.description')
+    .locations
+      %h3
+        = t('header.location.title')
+        %span.location
+          = t('header.location.location1')
+        %span.location
+          = t('header.location.location2')
+
+
