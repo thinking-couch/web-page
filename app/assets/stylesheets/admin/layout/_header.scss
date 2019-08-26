@@ -1,0 +1,29 @@
+#header {
+  background-color: $main-color;
+  height: 3.5em;
+  width: 100%;
+
+  .header-logo {
+    display: block;
+    padding: 7px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dropdown {
+    outline: none;
+    padding: 7px 0;
+  }
+
+  .header-dropdown {
+    color: $background-color;
+    outline: none;
+  }
+
+  .dashboard-title {
+    margin-bottom: 1.5em;
+  }
+}

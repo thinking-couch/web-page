@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module TCouch
   class Application < Rails::Application
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -21,5 +24,10 @@ module TCouch
     config.i18n.default_locale = :'es-MX'
     config.i18n.available_locales = [:en, :'es-MX']
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.to_prepare do
+      Clearance::PasswordsController.layout "admin"
+      Clearance::SessionsController.layout "admin"
+      Clearance::UsersController.layout "admin"
+    end
   end
 end

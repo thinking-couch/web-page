@@ -1,0 +1,9 @@
+es-MX:
+  activerecord:
+    attributes:
+      statistics:
+        name: Nombre
+        amount: Cantidad
+        show: Mostrar
+  statistics:
+    title: Estadísticas

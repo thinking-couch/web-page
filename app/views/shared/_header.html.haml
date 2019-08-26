@@ -1,18 +1,33 @@
 %section#header
-  = image_tag "shared/logo.svg", class: 'header-logo'
+  = image_tag "shared/logo.svg", class: 'header-logo '
   .header-container
-    = image_tag "shared/mobile/couple.svg", class: 'header-image'
-    .text-container
-      %h2.header-title
-        = t('header.title')
-      %p.header-description
-        = t('header.description')
-    .locations
-      %h3
-        = t('header.location.title')
+    .header-column
+      = image_tag "shared/mobile/couple.svg", class: 'header-image'
+      .header-text-container
+        %h3.header-title
+          = t('header.title')
+        %p.header-description
+          = t('header.description')
+      .locations
+        %h4.title
+          = t('header.location.title')
         %span.location
+          = fa_icon "map-marker"
           = t('header.location.location1')
         %span.location
+          = fa_icon "map-marker"
           = t('header.location.location2')
+      .header-social-media
+        %h3.header-title-social-media
+          = t('header.social-media.title')
+        .header-icons-social-media
+          = link_to 'https://www.facebook.com/thinkingcouch/', class: 'social-media-link', target: '_blank' do
+            = fa_icon "facebook-square", class: 'fa-lg'
+          = link_to 'https://twitter.com/thinkingcouchmx', class: 'social-media-link', target: '_blank' do
+            = fa_icon "twitter", class: 'fa-lg'
+          = link_to 'https://www.instagram.com/thinkingcouchmx/', class: 'social-media-link', target: '_blank' do
+            = fa_icon "instagram", class: 'fa-lg'
+    .header-column-image
+      = image_tag "shared/desktop/couple.svg", class: 'header-image-desktop'
 
 

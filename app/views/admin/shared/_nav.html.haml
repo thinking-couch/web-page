@@ -1,0 +1,18 @@
+%section#content-edit
+  %h1.dashboard-title
+    = t('admin.dashboard.title')
+  %nav
+    #nav-tab.nav.nav-tabs{role: "tablist"}
+      = link_to admin_root_path, class: "nav-item nav-link #{'active' if @page == :dashboard}" do { 'aria-controls': 'nav-home',
+                                                 'aria-selected': 'true', 'data-toggle': 'tab',
+                                                 role: 'tab' }
+        = t('admin.dashboard.sections.header')
+      = link_to statistics_path, class: 'nav-item nav-link' do { 'aria-controls': 'nav-home',
+                                                 'aria-selected': 'true', 'data-toggle': 'tab',
+                                                 role: 'tab' }
+        = t('admin.dashboard.sections.sponsors')
+      = link_to statistics_path, class: "nav-item nav-link #{'active' if @page == :statistics}" do { 'aria-controls': 'nav-home',
+                                                 'aria-selected': 'true', 'data-toggle': 'tab',
+                                                 role: 'tab' }
+        = t('admin.dashboard.sections.statistics')
+

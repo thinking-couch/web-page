@@ -1,0 +1,23 @@
+= render 'admin/shared/nav'
+.d-flex.justify-content-between.align-items-center.pb-3
+  %h3= t('statistics.title')
+  =link_to new_statistic_path, remote: true, class: 'btn btn-outline-success btn-lg' do
+    = fa_icon "plus-circle"
+    =t('actions.add')
+%table.table
+  %thead
+    %tr
+      %th= t('activerecord.attributes.statistics.name')
+      %th= t('activerecord.attributes.statistics.amount')
+      %th= t('activerecord.attributes.statistics.show')
+      %th
+  %tbody
+    - @statistics.each do |item|
+      %tr
+        %td= item.name
+        %td= item.amount
+        %td= item.show
+        %td
+          =link_to t('actions.edit'), edit_statistic_path(item), class: 'btn btn-primary', remote: true
+          =link_to t('actions.delete'), statistic_path(item), method: :delete, class: 'btn btn-danger'
+#statistics-modal-container.container

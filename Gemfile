@@ -14,18 +14,31 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap'
 
-gem "haml-rails"
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap_form'
+
+gem 'haml-rails'
 gem 'jquery-rails'
-gem "font-awesome-rails"
-
+gem 'sassc-rails', '>= 2.1.0'
+gem 'font-awesome-rails'
+gem 'clearance'
+gem "paperclip", "~> 6.0.0"
+gem "responders"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot'
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
+  gem 'reek', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubycritic', require: false
+  gem 'scss_lint', require: false
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
@@ -38,6 +51,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

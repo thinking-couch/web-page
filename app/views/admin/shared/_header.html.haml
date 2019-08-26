@@ -1,0 +1,10 @@
+%section#header
+  .container
+    = link_to root_path do
+      = image_tag "shared/logo.svg", class: 'header-logo'
+    - if signed_in?
+      .dropdown
+        %button#dropdownMenuButton.btn.dropdown-toggle.header-dropdown{"aria-expanded": "false", "aria-haspopup": "true", "data-toggle": "dropdown", type: "button"}
+          = current_user.name || current_user.email
+        .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
+          = link_to t('admin.header.account.log-out'), sign_out_path, method: :delete, class: 'dropdown-item'

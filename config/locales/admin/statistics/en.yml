@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      statistics:
+        name: Name
+        amount: Amount
+        show: Shoe

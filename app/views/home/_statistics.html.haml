@@ -1,0 +1,10 @@
+%section#statistics
+  .stat-container
+    - @statistics.each do |statistic|
+      .stat-data
+        %span.number
+          = statistic.amount
+        .label
+          = statistic.name
+
+

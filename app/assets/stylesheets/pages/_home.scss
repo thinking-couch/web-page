@@ -1,0 +1,148 @@
+.home {
+
+}
+
+#about-us {
+  .au-text {
+    color: $gray;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .au-description {
+    margin: 2.3571428571em 10% 0 10%;
+  }
+
+  .au-mark {
+    background: linear-gradient(0, #4ACFF9 0%, #61D4C9 100%);
+    color: $white;
+    font-weight: bold;
+    line-height: 1.1em;
+    padding: 0 .3em;
+  }
+
+  .au-participants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .au-data {
+      text-align: center;
+      margin-bottom: 1.625em;
+
+      .au-data-title {
+        height: 50px;
+        color: $gray;
+        font-size: 1.125em;
+        font-weight: 800;
+        letter-spacing: 0.13px;
+        line-height: 24px;
+        margin-bottom: 9px;
+
+        .au-fw {
+          font-weight: 300;
+        }
+      }
+
+      .au-data-text {
+        @extend .au-text;
+
+        margin: 0 10%;
+      }
+    }
+  }
+}
+
+#sponsors {
+  .spn-container{
+    font-size: 0.875em;
+
+    .spn-image {
+      background: asset-url('home/mobile/thanks.svg') no-repeat -77px -46px;
+      display: block;
+      height: 104px;
+      margin: auto;
+      width: 163px;
+    }
+
+    .spn-sponsors {
+      align-items: center;
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+
+      .spn-description {
+        color: $gray;
+        line-height: 21px;
+        opacity: 0.9;
+        padding: 1.625em 15% 0 15%;
+      }
+    }
+
+    .spn-support {
+      align-items: center;
+      background-color: $lightgray;
+      color: $gray;
+      display: flex;
+      flex-direction: column;
+      height: 16.2142857143em;
+      text-align: center;
+      width: 100%;
+      padding-top: 3.6428571429em;
+
+      .title {
+        height: 60px;
+        color: $gray;
+        font-size: 1.5714285714em;
+        font-weight: 300;
+        line-height: 1.3636363636em;
+        text-align: center;
+        margin: 0 15%;
+      }
+
+      .btn-support {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}
+
+#statistics {
+  padding: 2.8125em 1.875em 1.4375em 1.875em;
+
+  .stat-container {
+    display: flex;
+    flex-flow: row wrap;
+
+    .stat-data {
+      align-items: center;
+      display: flex;
+      flex: 1 0 33%;
+      flex-direction: column;
+      margin: 1.6875em 0 1.6875em 0;
+      text-align: center;
+
+      .number {
+        color: $lightblue;
+        font-size: 2.5em;
+        font-weight: 900;
+        height: 54px;
+        letter-spacing: 0.29px;
+        width: 49px;
+      }
+
+      .label {
+        color: $gray;
+        font-size: 0.875em;
+        font-weight: 800;
+        letter-spacing: 0.1px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+  }
+}

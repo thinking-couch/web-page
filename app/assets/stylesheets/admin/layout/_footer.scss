@@ -1,0 +1,17 @@
+#footer {
+  background-color: $main-color;
+  color: $white;
+  display: flex;
+  font-size: 21px;
+  height: 2em;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+
+  .footer-text {
+    display: block;
+    margin: auto;
+  }
+}

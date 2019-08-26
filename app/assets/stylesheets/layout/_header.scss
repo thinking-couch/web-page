@@ -1,21 +1,140 @@
 #header {
-  height: 759px;
+  color: $white;
+  height: 39.375em;
   width: 100%;
-  padding-top: 39px;
-  font-size: 18px;
+  padding: 39px ;
   background-color: #9013FE;
   background: linear-gradient(145.31deg, #3625AF 0%, #AD60D0 100%);
+
+  @include breakpoint('tablet') {
+    padding: 61px;
+  }
 
   .header-logo {
     vertical-align: center;
     display: block;
     margin: auto;
+
+    @include breakpoint('tablet') {
+      margin-left: 14px;
+    }
+  }
+
+  .header-title {
+    font-size: 1.125em;
+    line-height: 24px;
+    padding: 0 1em;
+    font-weight: bold;
+
+    @include breakpoint('tablet') {
+      flex-direction: row;
+      padding: 0;
+    }
   }
 
   .header-container {
     align-items: center;
     display: flex;
     flex-direction: column;
-  }
+    text-align: center;
 
+    @include breakpoint('tablet') {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 60px;
+    }
+
+    .header-column {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint('tablet') {
+        flex: 0 1 50%;
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 3.75em;
+      }
+    }
+
+    .header-column-image {
+      @include breakpoint('tablet') {
+        width: 50%;
+      }
+    }
+
+    .header-text-container {
+      padding-top: 18px;
+      width: 17.75em;
+
+      @include breakpoint('tablet') {
+        font-size: 25px;
+        width: 100%;
+      }
+
+        .header-description {
+          opacity: 0.9;
+          line-height: 21px;
+          font-size: 0.875em;
+
+          @include breakpoint('tablet') {
+            font-size: 16px;
+          }
+      }
+    }
+
+    .header-image {
+      @include breakpoint('tablet') {
+        display: none;
+      }
+    }
+
+    .header-image-desktop {
+      display: none;
+      width: 100%;
+
+      @include breakpoint('tablet') {
+        display: block;
+      }
+    }
+
+    .locations {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        opacity: 0.9;
+        font-size: 0.875em;
+        line-height: 21px;
+      }
+
+      .location {
+        color: #B69BD3;
+        font-size: 0.875em;
+        line-height: 19px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .header-social-media {
+      padding-top: 1.4375em;
+
+      .header-title-social-media {
+        @extend .header-title;
+
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      .header-icons-social-media {
+        font-size: 25px;
+
+        .social-media-link {
+          &:not(:last-of-type) {
+            margin-right: 50px;
+          }
+        }
+      }
+    }
+  }
 }

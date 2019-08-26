@@ -16,3 +16,19 @@ es-MX:
     social-media:
       title:
         'Se parte:'
+  admin:
+    footer:
+      'Desarrollado con Amor <3'
+    header:
+      account:
+        log-out: 'Cerrar sesión'
+    dashboard:
+      title:
+        'Editar contenido:'
+      sections:
+        header:
+          'Header'
+        sponsors:
+          'Sponsors'
+        statistics:
+          'Estadísticas'
