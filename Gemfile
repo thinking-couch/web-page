@@ -23,6 +23,7 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'font-awesome-rails'
 gem 'clearance'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk', '~> 3'
 gem "responders"
 gem 'pg', '>= 0.18', '< 2.0'
 

@@ -10,7 +10,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .container-main
-      =render partial: 'shared/header'
+      =render partial: 'shared/header', locals: { images: @images }
       .body
         = yield
       =render partial: 'shared/footer'

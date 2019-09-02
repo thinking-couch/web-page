@@ -2,12 +2,12 @@
   = image_tag "shared/logo.svg", class: 'header-logo '
   .header-container
     .header-column
-      = image_tag "shared/mobile/couple.svg", class: 'header-image'
+      = image_tag images.hero_image_mobile.url, class: 'header-image'
       .header-text-container
         %h3.header-title
-          = t('header.title')
+          = hero_title
         %p.header-description
-          = t('header.description')
+          = hero_paragraph
       .locations
         %h4.title
           = t('header.location.title')
@@ -28,6 +28,5 @@
           = link_to 'https://www.instagram.com/thinkingcouchmx/', class: 'social-media-link', target: '_blank' do
             = fa_icon "instagram", class: 'fa-lg'
     .header-column-image
-      = image_tag "shared/desktop/couple.svg", class: 'header-image-desktop'
-
+      = image_tag images.hero_image.url, class: 'header-image-desktop'
 

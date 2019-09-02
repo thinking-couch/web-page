@@ -1,5 +1,12 @@
-= bootstrap_form_for page_setting do |form|
-  = form.text_field :url_video
-  = form.text_field :hero_title
-  = form.text_area :hero_paragrap
-  = form.submit t('actions.save')
+.container
+  = bootstrap_form_for page_setting do |form|
+    = form.text_field :url_video
+    = form.text_field :hero_title
+    = form.text_area :hero_paragraph
+    .d-flex
+      = form.file_field :hero_image, wrapper_class: 'col-6 p-0'
+      = image_tag page_setting.hero_image.url(:thumb) if page_setting.hero_image.present?
+    .d-flex
+      = form.file_field :hero_image_mobile, wrapper_class: 'col-6 p-0'
+      = image_tag page_setting.hero_image_mobile.url(:thumb) if page_setting.hero_image_mobile.present?
+    = form.submit t('actions.save')
